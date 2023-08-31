@@ -2,14 +2,18 @@ import React from 'react'
 import { Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { deletevender } from '../slices/Venderslice';
+import { useNavigate } from 'react-router-dom';
 
 const Venderdatashow = () => {
   const dispatch = useDispatch()
+  const nevigate=useNavigate()
+  
   const userList = useSelector((state) => state.userlist);
   
   return (
     <div>
       <h2 className='heading'>User List And All Data about Vender Will be Shown Here !</h2>
+      <button className='backadmin' onClick={()=>nevigate('/admindataportal')}>Back</button>
       <ul>
         {userList && userList.map((user, index) => (
           <li key={index}>

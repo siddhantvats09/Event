@@ -12,7 +12,7 @@ const Adminlogin = () => {
 //email==="admin@gmail.com" && password === "admin123"
 
   const handelclick=()=>{
-    if(email==="" && password === ""){
+    if(email==="admin@gmail.com" && password === "admin123"){
       nevigate("/admindataportal")
     }else{
       settext(false)

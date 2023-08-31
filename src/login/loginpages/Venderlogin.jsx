@@ -22,7 +22,13 @@ const Venderlogin = () => {
     const submit =()=>{
         const next = {name, email ,price,product,file , number};
         dispatch(setvender(next) );
-          
+        alert("Data Updated")
+        setemail('')
+        setfile(null)
+        setname("")
+        setprice('')
+        setproduct('')
+        setnumber('')          
       }
     return (
         <div className="mainopen">

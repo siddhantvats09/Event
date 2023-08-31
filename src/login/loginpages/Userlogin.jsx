@@ -17,6 +17,13 @@ const Userlogin = () => {
     
     const next = {name, email ,budget , number};
     dispatch(setuser(next));
+    alert("Data Updated")
+        setemail('')
+        
+        setname("")
+        setbudget('')
+       
+        setnumber('')  
     
   }
   const click = () => {
