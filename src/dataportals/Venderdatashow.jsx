@@ -8,7 +8,10 @@ const Venderdatashow = () => {
   const dispatch = useDispatch()
   const nevigate=useNavigate()
   
-  const userList = useSelector((state) => state.userlist);
+  const userList = useSelector((state) => state.venderlist);
+  const click=(id)=>{
+    dispatch(deletevender(id))
+  }
   
   return (
     <div>
@@ -22,8 +25,8 @@ const Venderdatashow = () => {
             <p className='budget'>Budget: {user.price}</p>
             <p className='number'>Number: {user.number}</p>
             <p className='number'>Number: {user.product}</p>
-            <img src={user.file} alt="images" width={'200px'} />
-            {/* <Button  onClick={(e)=>clickk(index)}>Delete Data</Button> */}
+            <img src={user.files} alt="image" width={'200px'} />
+            <Button  onClick={(e)=>click(index)}>Delete Data</Button>
           </li>
         ))}
       </ul>

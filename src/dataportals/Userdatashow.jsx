@@ -23,7 +23,7 @@ const Userdatashow = () => {
             <p className='email'>Email: {user.email}</p>
             <p className='budget'>Budget: {user.budget}</p>
             <p className='number'>Number: {user.number}</p>
-            {/* <Button  onClick={(e)=>click(index)}>Delete Data</Button> */}
+            <Button  onClick={(e)=>click(index)}>Delete Data</Button>
            
           </li>
         ))}

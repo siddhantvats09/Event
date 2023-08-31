@@ -6,7 +6,7 @@ import { setvender } from '../../slices/Venderslice'
 const Venderlogin = () => {
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
-    const [file, setfile] = useState(null)
+    const [files, setfiles] = useState(null)
     const [number, setnumber] = useState('')
     const [price, setprice] = useState('')
     const [product, setproduct] = useState('')
@@ -20,11 +20,11 @@ const Venderlogin = () => {
 
 
     const submit =()=>{
-        const next = {name, email ,price,product,file , number};
+        const next = {name, email ,price,product,files , number};
         dispatch(setvender(next) );
         alert("Data Updated")
         setemail('')
-        setfile(null)
+        setfiles(null)
         setname("")
         setprice('')
         setproduct('')
@@ -58,7 +58,7 @@ const Venderlogin = () => {
                 
                 <div className="mainbox22">
                     <h4>Images / Files</h4>
-                    <input type="file" placeholder='Type' value={file} onChange={(e)=>setfile(e.target.value[0])} />
+                    <input type="file" placeholder='Type' value={files} onChange={(e)=>setfiles(e.target.value)} />
                 </div>
 
                 <button onClick={submit} className='button'>Add / Login</button>
