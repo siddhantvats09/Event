@@ -1,7 +1,10 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { Button } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { deletevender } from '../slices/Venderslice';
 
 const Venderdatashow = () => {
+  const dispatch = useDispatch()
   const userList = useSelector((state) => state.userlist);
   
   return (
@@ -10,10 +13,13 @@ const Venderdatashow = () => {
       <ul>
         {userList && userList.map((user, index) => (
           <li key={index}>
-            <p>Name: {user.name}</p>
-            <p>Email: {user.email}</p>
-            <p>Budget: {user.budget}</p>
-            <p>Number: {user.number}</p>
+          <p className='name'>Name: {user.name}</p>
+            <p className='email'>Email: {user.email}</p>
+            <p className='budget'>Budget: {user.price}</p>
+            <p className='number'>Number: {user.number}</p>
+            <p className='number'>Number: {user.product}</p>
+            <img src={user.file} alt="images" width={'200px'} />
+            {/* <Button  onClick={(e)=>clickk(index)}>Delete Data</Button> */}
           </li>
         ))}
       </ul>

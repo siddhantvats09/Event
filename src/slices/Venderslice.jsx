@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const user = createSlice({
-  name: 'userlist',
+const vender = createSlice({
+  name: 'venderlist',
   initialState: [],
   reducers: {
-    setuser: (state, action) => {
+    setvender: (state, action) => {
       return [...state, action.payload];
     },
-    deleteuser: (state,action)=>{
+    deletevender: (state,action)=>{
       state.splice(state.findIndex((arrow) => arrow.id === action.payload), 1)
     },
   },
 });
 
-export const { setuser,deleteuser} = user.actions;
+export const { setvender,deletevender} = vender.actions;
 
-export default user.reducer;
+export default vender.reducer;

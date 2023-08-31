@@ -1,13 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
-import Userslice from '../slices/Userslice';
-
+import { configureStore } from "@reduxjs/toolkit";
+import Userslice from "../slices/Userslice";
+import Venderslice from "../slices/Venderslice";
 
 const store = configureStore({
-  reducer: {
-    user: Userslice,
-    
-    // other reducers...
-  },
-});
-
-export default store;
+    reducer: {
+      userlist:Userslice,
+      venderlist:Venderslice,
+    },
+  });
+  
+  export default store;

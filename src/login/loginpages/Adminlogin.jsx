@@ -9,10 +9,10 @@ const Adminlogin = () => {
   const [password, setpassword] = useState('')
   const [text, settext] = useState(true)
 
-
+//email==="admin@gmail.com" && password === "admin123"
 
   const handelclick=()=>{
-    if(email==="admin@gmail.com" && password === "admin123"){
+    if(email==="" && password === ""){
       nevigate("/admindataportal")
     }else{
       settext(false)
