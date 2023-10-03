@@ -66,11 +66,11 @@
   padding: 20px;
   border: none;
   border-radius: 30%;
+  transition: 0.6s ease;
   
 }
 .backbutton:hover{
   background-color: #ff7f23;
-  transition: 0.6s;
 }
 
 
